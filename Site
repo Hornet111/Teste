@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Sapatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .separadores {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .separadores button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .separadores button:hover {
+            background-color: #555;
+        }
+
+        .produtos {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .produto {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .produto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .produto h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .produto p {
+            color: #777;
+            font-size: 1rem;
+        }
+
+        .produto .preco {
+            color: #e63946;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .produto button {
+            background-color: #e63946;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .produto button:hover {
+            background-color: #d62828;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .formas-pagamento {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .formas-pagamento img {
+            width: 50px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Loja de Sapatos</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Separadores de categorias -->
+        <div class="separadores">
+            <button onclick="showCategory('casual')">Sapatos Casuais</button>
+            <button onclick="showCategory('esportivo')">Sapatos Esportivos</button>
+            <button onclick="showCategory('social')">Sapatos Sociais</button>
+        </div>
+
+        <!-- Produtos Casuais -->
+        <section id="casual" class="produtos">
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Sapato Casual 1">
+                <h2>Sapato Casual 1</h2>
+                <p>Confortável e elegante, ideal para o dia a dia.</p>
+                <div class="preco">R$ 199,99</div>
+                <button>Comprar</button>
+            </div>
+
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Sapato Casual 2">
+                <h2>Sapato Casual 2</h2>
+                <p>Conforto e estilo para momentos casuais.</p>
+                <div class="preco">R$ 219,99</div>
+                <button>Comprar</button>
+            </div>
+        </section>
+
+        <!-- Produtos Esportivos -->
+        <section id="esportivo" class="produtos">
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Sapato Esportivo 1">
+                <h2>Sapato Esportivo 1</h2>
+                <p>Ideal para atividades físicas e conforto extremo.</p>
+                <div class="preco">R$ 249,99</div>
+                <button>Comprar</button>
+            </div>
+
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Sapato Esportivo 2">
+                <h2>Sapato Esportivo 2</h2>
+                <p>Durabilidade e desempenho para treinos intensos.</p>
+                <div class="preco">R$ 259,99</div>
+                <button>Comprar</button>
+            </div>
+        </section>
+
+        <!-- Produtos Sociais -->
+        <section id="social" class="produtos">
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Sapato Social 1">
+                <h2>Sapato Social 1</h2>
+                <p>Elegância e sofisticação para ocasiões formais.</p>
+                <div class="preco">R$ 299,99</div>
+                <button>Comprar</button>
+            </div>
+
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Sapato Social 2">
+                <h2>Sapato Social 2</h2>
+                <p>Perfeito para eventos formais e negócios.</p>
+                <div class="preco">R$ 349,99</div>
+                <button>Comprar</button>
+            </div>
+        </section>
+
+        <!-- Seção de formas de pagamento -->
+        <div class="formas-pagamento">
+            <h2>Formas de Pagamento</h2>
+            <p>Aceitamos as seguintes formas de pagamento:</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/MasterCard_Logo.svg/512px-MasterCard_Logo.svg.png" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Paypal_2014_logo.svg/512px-Paypal_2014_logo.svg.png" alt="PayPal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Pix_%28Brazil%29_logo.svg/512px-Pix_%28Brazil%29_logo.svg.png" alt="Pix">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Loja de Sapatos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para mostrar a categoria de sapatos escolhida
+        function showCategory(category) {
+            var sections = document.querySelectorAll('.produtos');
+            sections.forEach(function(section) {
+                section.style.display = 'none'; // Esconde todas as seções
+            });
+            document.getElementById(category).style.display = 'grid'; // Mostra a seção selecionada
+        }
+
+        // Mostrar por padrão a primeira categoria (Casual)
+        showCategory('casual');
+    </script>
+
+</body>
+</html>
